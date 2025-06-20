@@ -48,7 +48,7 @@ export default function page() {
               </span>
             </div>
             <a
-              href="https://youtube.com/@TechSimplifiedBySenthil"
+              href="https://www.youtube.com/@svjtechtamil3134"
               className={styles.ctaButton}
               target="_blank"
               rel="noopener noreferrer"

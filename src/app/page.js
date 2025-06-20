@@ -57,13 +57,13 @@ export default function Home() {
 
               <div className={styles.ctaButtons}>
                 <a
-                  href="/projects"
+                  href="/pages/ProjectsPage"
                   className={`${styles.button} ${styles.primary}`}
                 >
                   <FaArrowRight className={styles.icon} /> Explore My Projects
                 </a>
                 <a
-                  href="https://youtube.com/yourchannel"
+                  href="/pages/YoutubePage"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${styles.button} ${styles.secondary}`}
@@ -71,7 +71,7 @@ export default function Home() {
                   <FaPlay className={styles.icon} /> Watch on YouTube
                 </a>
                 <a
-                  href="/mentorship"
+                  href="/pages/Mentorship"
                   className={`${styles.button} ${styles.tertiary}`}
                 >
                   <FaUserGraduate className={styles.icon} /> Book a Mentorship
