@@ -1,8 +1,8 @@
 // Footer.module.scss
 .footer {
-  background: linear-gradient(to right, #00d2ff, #3a7bd5);
-  color: #ffffff;
-  padding: 3rem 0 1rem;
+  background: var(--primary-gradient);
+  color: var(--text-white);
+  padding: var(--space-xl) 0 var(--space-sm);
   position: relative;
   overflow: hidden;
   
@@ -40,12 +40,12 @@
 .container { 
   width: 90%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--space-lg);
   position: relative;
   z-index: 3;
   
   @media (max-width: 768px) {
-    padding: 0 1rem;
+    padding: 0 var(--space-sm);
   }
 }
 
@@ -57,7 +57,7 @@
   
   @media (min-width: 768px) {
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
+    gap: var(--space-xl);
   }
   
   @media (max-width: 767px) {
@@ -69,69 +69,81 @@
 .logoSection {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--space-sm);
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: var(--text-4xl);
   font-weight: 700;
   text-decoration: none;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  color: var(--text-white);
+  text-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
   
   &:hover {
     transform: translateY(-2px);
-    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+    text-shadow: var(--shadow-lg);
+    color: var(--accent-color);
   }
   
   @media (max-width: 768px) {
-    font-size: 1.75rem;
+    font-size: var(--text-3xl);
   }
 }
 
 .tagline {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1rem;
+  font-size: var(--text-base);
   line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
 }
 
 .contactInfo {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--space-sm);
 }
 
 .contactItem {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-sm);
   color: rgba(255, 255, 255, 0.85);
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
+  transition: var(--transition-normal);
+  
+  &:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+  }
   
   @media (max-width: 767px) {
     justify-content: center;
+    
+    &:hover {
+      transform: none;
+    }
   }
 }
 
 .contactIcon {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-lg);
+  color: var(--accent-color);
+  transition: var(--transition-normal);
 }
 
 // Links Section Styles
 .links, .services, .social {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--space-sm);
 }
 
 .linksTitle, .servicesTitle, .socialTitle {
-  font-size: 1.2rem;
+  font-size: var(--text-xl);
   font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 0.5rem;
+  color: var(--text-white);
+  margin-bottom: var(--space-xs);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   position: relative;
@@ -143,8 +155,8 @@
     left: 0;
     width: 30px;
     height: 2px;
-    background: linear-gradient(90deg, #ffd700, #ff6b6b);
-    border-radius: 1px;
+    background: linear-gradient(90deg, var(--warning-color), var(--danger-color));
+    border-radius: var(--radius-sm);
   }
   
   @media (max-width: 767px) {
@@ -158,19 +170,14 @@
 .linksList, .servicesList {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-}
-.linksList{
-  a{
-    gap: 1rem;
-  }
+  gap: var(--space-sm);
 }
 
 .link {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
+  font-size: var(--text-sm);
+  transition: var(--transition-normal);
   position: relative;
   display: inline-block;
   
@@ -179,11 +186,12 @@
     position: absolute;
     left: -20px;
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: var(--transition-normal);
+    color: var(--accent-color);
   }
   
   &:hover {
-    color: #ffd700;
+    color: var(--warning-color);
     transform: translateX(10px);
     
     &::before {
@@ -205,21 +213,29 @@
 
 .serviceItem {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-  padding: 0.25rem 0;
+  font-size: var(--text-sm);
+  padding: var(--space-xs) 0;
   border-left: 2px solid transparent;
-  padding-left: 0.75rem;
-  transition: all 0.3s ease;
+  padding-left: var(--space-sm);
+  transition: var(--transition-normal);
   
   &:hover {
-    border-left-color: #ffd700;
-    color: #ffffff;
+    border-left-color: var(--warning-color);
+    color: var(--text-white);
+    background: rgba(255, 255, 255, 0.05);
+    padding-left: var(--space-md);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
   }
   
   @media (max-width: 767px) {
     border-left: none;
     padding-left: 0;
     text-align: center;
+    
+    &:hover {
+      padding-left: 0;
+      border-radius: var(--radius-md);
+    }
   }
 }
 
@@ -227,7 +243,7 @@
 .socialLinks {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--space-sm);
   
   @media (max-width: 767px) {
     flex-direction: row;
@@ -239,47 +255,49 @@
 .socialLink {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-sm);
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
-  padding: 0.75rem;
-  border-radius: 12px;
+  font-size: var(--text-sm);
+  padding: var(--space-sm);
+  border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
+  transition: var(--transition-normal);
   
   &:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    color: #ffffff;
+    box-shadow: var(--shadow-lg);
+    color: var(--text-white);
+    border-color: var(--accent-color);
     
     .socialIcon {
       transform: scale(1.2);
-      color: #ffd700;
+      color: var(--warning-color);
     }
   }
   
   @media (max-width: 767px) {
     flex-direction: column;
-    padding: 1rem 0.75rem;
+    padding: var(--space-sm) var(--space-sm);
     min-width: 80px;
     text-align: center;
     
     span {
-      font-size: 0.8rem;
+      font-size: var(--text-xs);
     }
   }
 }
 
 .socialIcon {
-  font-size: 1.3rem;
-  transition: all 0.3s ease;
+  font-size: var(--text-xl);
+  transition: var(--transition-normal);
+  color: var(--accent-color);
   
   @media (max-width: 767px) {
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
   }
 }
 
@@ -288,64 +306,90 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: var(--space-lg);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--space-sm);
   
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
+    gap: var(--space-md);
   }
 }
 
 .copyright {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   font-weight: 300;
 }
 
 .additionalLinks {
   display: flex;
-  gap: 2rem;
+  gap: var(--space-lg);
   
   @media (max-width: 768px) {
-    gap: 1rem;
+    gap: var(--space-sm);
   }
 }
 
 .additionalLink {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
+  font-size: var(--text-xs);
+  transition: var(--transition-normal);
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--warning-color);
+    transition: var(--transition-normal);
+  }
   
   &:hover {
-    color: #ffd700;
+    color: var(--warning-color);
+    
+    &::after {
+      width: 100%;
+    }
   }
 }
 
 // Responsive Design
 @media (max-width: 480px) {
   .footer {
-    padding: 2rem 0 1rem;
+    padding: var(--space-lg) 0 var(--space-sm);
   }
   
   .content {
-    gap: 2rem;
+    gap: var(--space-lg);
   }
   
   .logo {
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
   }
   
   .socialLinks {
-    gap: 0.5rem;
+    gap: var(--space-xs);
   }
   
   .socialLink {
     min-width: 70px;
-    padding: 0.75rem 0.5rem;
+    padding: var(--space-sm) var(--space-xs);
+  }
+}
+
+// Dark mode support (if needed)
+@media (prefers-color-scheme: dark) {
+  .footer {
+    // Already dark themed, but you can add additional dark mode tweaks here
+    &::before {
+      background: rgba(0, 0, 0, 0.2);
+    }
   }
 }

@@ -36,7 +36,7 @@ export default function page() {
       {/* Main Content */}
       <section className={styles.mainContent}>
         <div className={styles.container}>
-          <div className={styles.grid}>
+          <div className={styles.flexContainer}>
             {/* Contact Form */}
             <div className={styles.contactForm}>
               <h2 className={styles.sectionTitle}>Send a Message</h2>
