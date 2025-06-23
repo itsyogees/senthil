@@ -242,7 +242,137 @@
       }
     }
   }
+  // Upcoming Videos Section
+.upcomingSection {
+  padding: 4rem 0;
+  width: 90%;
+  margin: 0 auto;
   
+  .container {
+    width: 100%;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+    position: relative;
+    font-weight: 700;
+    
+    &::after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 4px;
+      background: linear-gradient(to right, #ff0000, #ff6a00);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+  }
+}
+
+.sectionDark {
+  background: linear-gradient(135deg, #f1f3f6 0%, #e4e8eb 100%);
+  border-radius: 12px;
+  margin: 2rem auto;
+  padding: 3rem 0;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.upcomingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.upcomingCard {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+  border-left: 4px solid #ff0000;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.upcomingContent {
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #222;
+    font-weight: 700;
+  }
+}
+
+.upcomingDescription {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.upcomingMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  
+  span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.topicPill {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff0000;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+// Responsive adjustments for upcoming section
+@media (max-width: 768px) {
+  .upcomingGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .upcomingCard {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .sectionSubtitle {
+    padding: 0 1rem;
+  }
+}
   .playlistsGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));

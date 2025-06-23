@@ -8,6 +8,7 @@ import {
   FaPlay,
   FaEye,
   FaThumbsUp,
+  FaCalendarAlt,
 } from "react-icons/fa";
 import styles from "./YoutubePage.module.scss";
 
@@ -126,6 +127,45 @@ export default function page() {
       likes: "542"
     }
   ];
+  const upcomingVideos = [
+    {
+      title: "AI for Beginners - Getting Started",
+      description: "Introduction to artificial intelligence concepts with practical Python examples for absolute beginners.",
+      releaseDate: "June 28, 2023",
+      topics: ["AI Basics", "Python Implementation", "Simple Projects"]
+    },
+    {
+      title: "Advanced React Patterns",
+      description: "Learn advanced React patterns and techniques to build more maintainable and performant applications.",
+      releaseDate: "July 5, 2023",
+      topics: ["Compound Components", "Render Props", "Performance Optimization"]
+    },
+    {
+      title: "Microservices Architecture",
+      description: "Complete guide to designing and implementing microservices with Docker and Kubernetes.",
+      releaseDate: "July 12, 2023",
+      topics: ["Service Design", "Containerization", "Orchestration"]
+    },
+    {
+      title: "TypeScript Masterclass",
+      description: "From basics to advanced TypeScript features for modern web development.",
+      releaseDate: "July 19, 2023",
+      topics: ["Type System", "Generics", "Decorators"]
+    },
+    {
+      title: "Blockchain Fundamentals",
+      description: "Understanding blockchain technology and building a simple cryptocurrency from scratch.",
+      releaseDate: "July 26, 2023",
+      topics: ["Blockchain Theory", "Smart Contracts", "DApps"]
+    },
+    {
+      title: "DevOps CI/CD Pipelines",
+      description: "Setting up complete CI/CD pipelines with GitHub Actions and AWS.",
+      releaseDate: "August 2, 2023",
+      topics: ["Automated Testing", "Deployment Strategies", "Infrastructure as Code"]
+    }
+  ];
+
 
   return (
     <div className={styles.youtube}>
@@ -217,6 +257,32 @@ export default function page() {
                   ></iframe>
                 </div>
                 <p className={styles.playlistDescription}>{playlist.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className={`${styles.upcomingSection} ${styles.sectionDark}`}>
+        <div className={styles.container}>
+          <h2>Upcoming Videos</h2>
+          <p className={styles.sectionSubtitle}>Here's what we're working on next</p>
+          <div className={styles.upcomingGrid}>
+            {upcomingVideos.map((video, index) => (
+              <div key={index} className={styles.upcomingCard}>
+                <div className={styles.upcomingContent}>
+                  <h3>{video.title}</h3>
+                  <p className={styles.upcomingDescription}>{video.description}</p>
+                  <div className={styles.upcomingMeta}>
+                    <span>
+                      <FaCalendarAlt /> {video.releaseDate}
+                    </span>
+                  </div>
+                  <div className={styles.topics}>
+                    {video.topics.map((topic, i) => (
+                      <span key={i} className={styles.topicPill}>{topic}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
