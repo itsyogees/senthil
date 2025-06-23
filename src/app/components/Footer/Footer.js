@@ -1,6 +1,12 @@
 "use client";
 import Link from "next/link";
-import { FaTwitter, FaLinkedinIn, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaLinkedinIn,
+  FaGithub,
+  FaInstagram,
+  FaEnvelope,
+} from "react-icons/fa";
 import { HiOutlineLocationMarker, HiOutlinePhone } from "react-icons/hi";
 import styles from "./Footer.module.scss";
 
@@ -12,7 +18,7 @@ export default function Footer() {
           {/* Logo and Description Section */}
           <div className={styles.logoSection}>
             <Link href="/" className={styles.logo}>
-              Senthilkumar K
+              SENTHILKUMAR K
             </Link>
             <p className={styles.tagline}>
               Building digital experiences that inspire and engage
@@ -43,11 +49,14 @@ export default function Footer() {
               <Link href="/pages/Services" className={styles.link}>
                 Services
               </Link>
-              <Link href="/pages/Portfolio" className={styles.link}>
-                Portfolio
+              <Link href="/pages/YoutubePage" className={styles.link}>
+                Youtube
               </Link>
               <Link href="/pages/Blog" className={styles.link}>
                 Blog
+              </Link>
+              <Link href="/pages/ProjectsPage" className={styles.link}>
+                Projects
               </Link>
               <Link href="/pages/Contact" className={styles.link}>
                 Contact
@@ -59,11 +68,21 @@ export default function Footer() {
           <div className={styles.services}>
             <h3 className={styles.servicesTitle}>Services</h3>
             <div className={styles.servicesList}>
-              <span className={styles.serviceItem}>Architecture & Strategy (Cloud, Mobile, Microservices)</span>
-              <span className={styles.serviceItem}>Cloud Optimization (Azure, AWS)</span>
-              <span className={styles.serviceItem}>DevOps & CI/CD Planning</span>
-              <span className={styles.serviceItem}>App Modernization & MVP Development</span>
-              <span className={styles.serviceItem}>AI Integration with GenAI</span>
+              <span className={styles.serviceItem}>
+                Architecture & Strategy (Cloud, Mobile, Microservices)
+              </span>
+              <span className={styles.serviceItem}>
+                Cloud Optimization (Azure, AWS)
+              </span>
+              <span className={styles.serviceItem}>
+                DevOps & CI/CD Planning
+              </span>
+              <span className={styles.serviceItem}>
+                App Modernization & MVP Development
+              </span>
+              <span className={styles.serviceItem}>
+                AI Integration with GenAI
+              </span>
             </div>
           </div>
 
@@ -71,8 +90,8 @@ export default function Footer() {
           <div className={styles.social}>
             <h3 className={styles.socialTitle}>Connect With Me</h3>
             <div className={styles.socialLinks}>
-              <Link 
-                href="https://twitter.com/yourusername" 
+              <Link
+                href="https://twitter.com/yourusername"
                 className={styles.socialLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -81,8 +100,8 @@ export default function Footer() {
                 <FaTwitter className={styles.socialIcon} />
                 <span>Twitter</span>
               </Link>
-              <Link 
-                href="https://linkedin.com/in/yourusername" 
+              <Link
+                href="https://linkedin.com/in/yourusername"
                 className={styles.socialLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -91,8 +110,8 @@ export default function Footer() {
                 <FaLinkedinIn className={styles.socialIcon} />
                 <span>LinkedIn</span>
               </Link>
-              <Link 
-                href="https://github.com/yourusername" 
+              <Link
+                href="https://github.com/yourusername"
                 className={styles.socialLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -101,8 +120,8 @@ export default function Footer() {
                 <FaGithub className={styles.socialIcon} />
                 <span>GitHub</span>
               </Link>
-              <Link 
-                href="https://instagram.com/yourusername" 
+              <Link
+                href="https://instagram.com/yourusername"
                 className={styles.socialLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -118,7 +137,8 @@ export default function Footer() {
         {/* Copyright Section */}
         <div className={styles.bottom}>
           <div className={styles.copyright}>
-            &copy; {new Date().getFullYear()} Senthilkumar K. All rights reserved.
+            &copy; {new Date().getFullYear()} Senthilkumar K. All rights
+            reserved.
           </div>
           <div className={styles.additionalLinks}>
             <Link href="/privacy" className={styles.additionalLink}>

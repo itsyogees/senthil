@@ -73,7 +73,7 @@ export default function page() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          <h1 className={styles.title}>My Projects</h1>
+          <h1 className={styles.title}>MY PROJECTS</h1>
           <p className={styles.subtitle}>
             Real-world solutions combining cutting-edge technologies with practical applications
           </p>

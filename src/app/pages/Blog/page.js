@@ -82,7 +82,7 @@ export default function page() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Tech Architecture Blog</h1>
+          <h1 className={styles.title}>TECH ARCHITECTURE BLOG</h1>
           <p className={styles.subtitle}>
             Practical insights on software architecture, mobile development, and tech career growth
           </p>

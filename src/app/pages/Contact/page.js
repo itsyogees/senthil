@@ -23,10 +23,10 @@ export default function page() {
 
   return (
     <div className={styles.contact}>
-      {/* Hero Section */}
+      
       <section className={styles.hero}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Get In Touch</h1>
+          <h1 className={styles.title}>GET IN TOUCH</h1>
           <p className={styles.subtitle}>
             Have questions or want to discuss a project? Reach out through any of these channels.
           </p>

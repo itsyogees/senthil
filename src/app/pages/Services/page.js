@@ -72,7 +72,7 @@ export default function page() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          <h1 className={styles.title}>My Services</h1>
+          <h1 className={styles.title}>MY SERVICE</h1>
           <p className={styles.subtitle}>
             Professional consulting and training services for modern technology solutions
           </p>
@@ -111,8 +111,8 @@ export default function page() {
           <p className={styles.ctaText}>
             Contact me to discuss how I can help your team or organization with consulting or training services.
           </p>
-          <a href="/contact" className={styles.ctaButton}>
-            Get in Touch
+          <a href="/pages/Contact" className={styles.ctaButton}>
+           GET IN TOUCH
           </a>
         </div>
       </section>

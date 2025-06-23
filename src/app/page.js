@@ -46,7 +46,7 @@ export default function Home() {
 
             <div className={styles.heroText}>
               <h1 className={styles.tagline}>
-                <span className={styles.highlight}>Senthilkumar K</span>
+                <span className={styles.highlight}>SENTHILKUMAR K</span>
               </h1>
               <p className={styles.intro}>
                 Solution Architect | Cloud & Mobility | YouTuber | Tech Mentor |
